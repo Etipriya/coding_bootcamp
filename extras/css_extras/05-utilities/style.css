@@ -1,0 +1,76 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 10px;
+}
+
+.container {
+  /* Layout CSS Properties */
+  max-height: 100vh;
+  overflow-y: auto;
+
+  /* Background Image CSS Properties */
+  background-image: url("./hero.jpg");
+  background-size: cover;
+  background-position: top;
+}
+
+.article {
+  /* Text CSS Properties */
+  text-align: justify;
+  font-size: 1.8rem;
+  line-height: 1.5;
+  font-weight: 500;
+
+  /* Spacing CSS Properties */
+  margin-bottom: 20px;
+  margin-top: 20px;
+  padding: 20px;
+
+  /* Sizing CSS Properties */
+  width: 50%;
+
+  /* Positioning CSS Properties */
+  margin-left: auto;
+  margin-right: auto;
+
+  /* Box CSS Properties */
+  border: 1px solid #686868;
+  border-radius: 4px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+
+  /* Color CSS Properties */
+  background-color: #ececec;
+}
+
+.btn-control {
+  /* Positioning CSS Properties */
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+
+  /* Spacing CSS Properties */
+  padding: 15px;
+
+  /* Color CSS Properties */
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.btn {
+  /* Text CSS Properties */
+  font-size: 18px;
+  font-weight: 600;
+
+  /* Spacing CSS Properties */
+  padding: 10px;
+
+  /* Color CSS Properties */
+  background-color: #00e84d;
+
+  /* Box CSS Properties */
+  border: none;
+  cursor: pointer;
+}

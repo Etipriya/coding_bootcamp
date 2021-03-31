@@ -1,0 +1,23 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  background-color: gray;
+  padding: 10px;
+
+  /* Flex container properties */
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.item {
+  background-color: hotpink;
+  padding: 30px;
+  margin: 30px;
+  font-size: 40px;
+  color: white;
+}
