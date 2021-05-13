@@ -1,21 +1,27 @@
-// Require/import the HTTP module
-const http = require('http');
+const http = require("http");
 
-// Define a port to listen for incoming requests
 const PORT = 8080;
 
-// Create a generic function to handle requests and responses
 const handleRequest = (request, response) => {
-  // Send the below string to the client when the user visits the PORT URL
-  response.end(`It Works!! Path Hit: ${request.url}`);
+  if (request.url === "/songs") {
+    return response.end(`Response from songs`);
+  }
+
+  if (request.url === "/books") {
+    return response.end(`Response from books`);
+  }
+
+  if (request.url === "/shoes") {
+    return response.end(`Response from shoes`);
+  }
+
+  return response.end(`Invalid route`);
 };
 
-// Use the Node HTTP package to create our server.
-// Pass the handleRequest function to empower it with functionality.
+const onSuccessfulOpen = () => {
+  console.log(`Server listening on: http://localhost:${PORT}`);
+};
+
 const server = http.createServer(handleRequest);
 
-// Start our server so that it can begin listening to client requests.
-server.listen(PORT, () => {
-  // Log (server-side) when our server has started
-  console.log(`Server listening on: http://localhost:${PORT}`);
-});
+server.listen(PORT, onSuccessfulOpen);
