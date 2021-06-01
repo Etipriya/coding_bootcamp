@@ -1,8 +1,8 @@
-const sequelize = require('../config/connection');
-const { Traveller, Location, Trip } = require('../models');
+const sequelize = require("../config/connection");
+const { Traveller, Location, Trip } = require("../models");
 
-const travellerSeedData = require('./travellerSeedData.json');
-const locationSeedData = require('./locationSeedData.json');
+const travellerSeedData = require("./travellerSeedData.json");
+const locationSeedData = require("./locationSeedData.json");
 
 const seedDatabase = async () => {
   await sequelize.sync({ force: true });
@@ -14,14 +14,12 @@ const seedDatabase = async () => {
   // Create trips at random
   for (let i = 0; i < 10; i++) {
     // Get a random traveller's `id`
-    const { id: randomTravellerId } = travellers[
-      Math.floor(Math.random() * travellers.length)
-    ];
+    const { id: randomTravellerId } =
+      travellers[Math.floor(Math.random() * travellers.length)];
 
     // Get a random location's `id`
-    const { id: randomLocationId } = locations[
-      Math.floor(Math.random() * locations.length)
-    ];
+    const { id: randomLocationId } =
+      locations[Math.floor(Math.random() * locations.length)];
 
     // Create a new trip with random `trip_budget` and `traveller_amount` values, but with ids selected above
     await Trip.create({
